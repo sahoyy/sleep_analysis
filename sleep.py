@@ -1,20 +1,19 @@
 import streamlit as st
 import pandas as pd
-import mysql.connector
+import pymysql
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
 
-# MySQL Database Connection
-DB_HOST = "localhost"
-DB_USER = "root"  # Change if you set a password
-DB_PASSWORD = ""  # Change if you set a password
-DB_NAME = "sleep_analysis"
+
+DB_HOST = "sql304.infinityfree.com" 
+DB_USER = "if0_38340859"
+DB_PASSWORD = "STAsalsabila" 
+DB_NAME = "if0_38340859_sleep_analysis" 
 TABLE_NAME = "sleep_data"
 
-# Connect to MySQL
 def create_connection():
-    return mysql.connector.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
+    return pymysql.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
 
 # Insert Data
 def insert_data(name, sleep_hours, age):
