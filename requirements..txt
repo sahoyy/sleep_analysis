@@ -1,6 +1,6 @@
-streamlit
-pandas
-numpy
-matplotlib
-pymysql
-scipy
+streamlit==1.30.0
+pandas==2.1.4
+numpy==1.26.3
+matplotlib==3.8.2
+pymysql==1.1.0
+scipy==1.11.4
